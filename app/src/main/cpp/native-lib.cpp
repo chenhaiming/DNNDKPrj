@@ -7,7 +7,7 @@ extern "C"
 JNIEXPORT jstring
 
 JNICALL
-Java_comqh_chm_dnndkprj_MainActivity_stringFromJNI(
+stringFromJNI(
         JNIEnv *env,
         jobject /* this */) {
     std::string hello = "I m is on Jni onLoad";
@@ -19,11 +19,11 @@ void dynamicTest(){
 }
 static const char *mClassName = "comqh/chm/dnndkprj/MainActivity";
 JNINativeMethod method[] = {
-        {"dynamicJavaTest","()V",(void *)dynamicTest}
+        {"dynamicJavaTest","()V",(void *)dynamicTest},
+        {"stringFramJNI","()Ljava/lang/String;",(void*)stringFromJNI}
 };
 
 int JNI_OnLoad(JavaVM *vm, void *re){
-    //
     _vm = vm;
     // 获得JNIEnv
     JNIEnv *env = 0;
