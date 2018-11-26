@@ -16,6 +16,9 @@ import static org.junit.Assert.*;
  */
 @RunWith(AndroidJUnit4.class)
 public class ExampleInstrumentedTest {
+
+    private static final String STRING_TO_BE_TYPED = "Peter";
+
     @Test
     public void useAppContext() throws Exception {
         // Context of the app under test.
@@ -23,4 +26,6 @@ public class ExampleInstrumentedTest {
 
         assertEquals("comqh.chm.dnndkprj", appContext.getPackageName());
     }
+
+
 }
